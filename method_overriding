@@ -1,0 +1,42 @@
+class Animal:
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        print("Woof!")
+
+class Cat(Animal):
+    def sound(self):
+        print("Meow!")
+
+class Cow(Animal):
+    def sound(self):
+        print("Moo!")
+
+class Zoo:
+    def make_sound(self, animal):
+        animal.sound()
+
+    def make_sound_multiple(self, *animals):
+        for animal in animals:
+            animal.sound()
+
+# Creating objects of different classes
+dog = Dog()
+cat = Cat()
+cow = Cow()
+
+zoo = Zoo()
+
+# Calling the make_sound() method with different objects
+zoo.make_sound(dog)  # Output: Woof!
+zoo.make_sound(cat)  # Output: Meow!
+zoo.make_sound(cow)  # Output: Moo!
+
+# Calling the make_sound_multiple() method with different objects
+zoo.make_sound_multiple(dog, cat, cow)
+# Output:
+# Woof!
+# Meow!
+# Moo!
