@@ -1,0 +1,25 @@
+''' Python does not have built-in support for method overloading like some other programming languages. Unlike languages such as Java or 
+C++, you cannot define multiple methods with the same name but different parameter lists.
+In Python, you can achieve similar functionality by using default parameter values or variable-length arguments. Here's an example using
+default parameter values '''
+
+class MathOperations:
+    def add(self, a, b=None, c=None):
+        if b is not None and c is not None:
+            return a + b + c
+        elif b is not None:
+            return a + b
+        else:
+            return a
+
+# Creating an object of the MathOperations class
+math = MathOperations()
+
+# Method overloading using default values
+result1 = math.add(2)
+result2 = math.add(2, 3)
+result3 = math.add(2, 3, 4)
+
+print(result1)  # Output: 2
+print(result2)  # Output: 5
+print(result3)  # Output: 9
